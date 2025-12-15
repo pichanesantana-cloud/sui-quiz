@@ -24,7 +24,7 @@ function App() {
   const [answers, setAnswers] = useState(Array(questions.length).fill(null))
   const [score, setScore] = useState(null)
   const [feedback, setFeedback] = useState('')
-  const [packageId, setPackageId] = useState('')
+  const [packageId, setPackageId] = useState('0x709c354a6c4801a04c49d5fde4f70b150011b5754dd14d5e78468885fca8cb07')
   const [adminCapId, setAdminCapId] = useState('')
   const [status, setStatus] = useState('')
 

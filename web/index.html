@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sui Quiz • Fundamentos de Finanças, Blockchain e Sui</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Sui Quiz</h1>
+      <p class="subtitle">Aprenda o básico de finanças, blockchain e a rede Sui</p>
+      <div class="wallet-bar" role="region" aria-label="Conexão de carteira">
+        <button id="connect-btn" class="btn">Conectar carteira</button>
+        <span id="wallet-address" class="wallet-address" aria-live="polite"></span>
+      </div>
+    </header>
+
+    <main>
+      <form id="quiz-form" class="quiz" aria-describedby="quiz-help">
+        <p id="quiz-help" class="sr-only">Selecione uma resposta por pergunta e envie para ver sua pontuação.</p>
+        <div id="questions"></div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Enviar respostas</button>
+          <button type="button" id="reset-btn" class="btn">Refazer</button>
+        </div>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" aria-atomic="true"></section>
+      <section id="reward" class="reward" hidden></section>
+
+      <form id="chain-settings" class="quiz settings" aria-label="Configurações de rede e pacote">
+        <fieldset class="question">
+          <legend>Configurações on-chain (opcional para cunhar badge)</legend>
+          <div class="options">
+            <label class="option">
+              <span>Rede</span>
+              <select id="network-select">
+                <option value="testnet">testnet</option>
+                <option value="devnet">devnet</option>
+                <option value="mainnet">mainnet</option>
+              </select>
+            </label>
+            <label class="option">
+              <span>Package ID</span>
+              <input id="package-id" type="text" placeholder="0x..." />
+            </label>
+            <label class="option">
+              <span>AdminCap Object ID</span>
+              <input id="admincap-id" type="text" placeholder="0x..." />
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <small>Feito com Move/Sui (badge opcional on-chain). Código educacional.</small>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+  </html>
+
